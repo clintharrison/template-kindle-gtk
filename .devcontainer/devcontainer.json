@@ -1,0 +1,25 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "Kindle GTK app",
+
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"platform": "kindlehf"
+		}
+	},
+
+  // This seems to be required for the VS Code Dev Container extension
+	"remoteUser": "root",
+	"updateRemoteUserUID": false,
+
+  // Extra privileges are needed to mount the disk image (as part of the postCreateCommand)
+	"runArgs": [
+		"--privileged",
+		"--cap-add=MKNOD",
+		"--cap-add=SYS_ADMIN"
+	],
+
+  // Run kindle-sdk/gen-sdk.sh
+	"postCreateCommand": "/opt/finalize.sh"
+}

@@ -1,0 +1,58 @@
+<interface>
+  <object id="window" class="GtkWindow">
+    <property name="title">L:A_N:application_ID:org.kindlemodding.template-kindle-gtk_PC:N</property>
+    <property name="default-width">632</property>
+    <property name="default-height">840</property>
+    <property name="border_width">0</property>
+    <property name="window_position">center</property>
+
+    <child>
+      <object class="GtkVBox" id="wrapper_box">
+        <property name="visible">True</property>
+
+        <child>
+          <object class="GtkHBox" id="hbox_top">
+            <property name="visible">True</property>
+            <property name="border_width">5</property>
+
+            <child>
+              <object class="GtkButton" id="title_button_left">
+                <property name="visible">True</property>
+                <property name="relief">none</property>
+                <property name="label">Quit</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="padding">5</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+
+        <child>
+          <object class="GtkVBox" id="content_box">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkLabel" id="label_hello">
+                <property name="visible">True</property>
+                <property name="label">Hello, World!</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>
